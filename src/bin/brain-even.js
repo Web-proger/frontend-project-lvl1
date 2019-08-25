@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 
-import { games, familiarity, welcome, getRandomNum, getAnswer } from '..';
+import {
+  games,
+  familiarity,
+  welcome,
+  getRandomNum,
+  getAnswer,
+} from '..';
 
 const parityCheck = (userName) => {
   for (let i = 0; i < 3; i += 1) {
@@ -12,7 +18,7 @@ const parityCheck = (userName) => {
     if ((num % 2 === 0 && answer === 'yes') || (num % 2 > 0 && answer === 'no')) {
       console.log('Correct!');
     } else {
-      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.")
+      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
       console.log(`Let's try again, ${userName}!`);
       return;
     }
@@ -20,6 +26,6 @@ const parityCheck = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-welcome(games["brain-even"]);
+welcome(games['brain-even']);
 const name = familiarity();
 parityCheck(name);
