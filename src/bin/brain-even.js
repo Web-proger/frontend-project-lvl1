@@ -1,20 +1,18 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-import { familiarity, welcome } from '..';
-
-const getRandomNum = (x = 100) => Math.round(Math.random() * x);
+import { games, familiarity, welcome, getRandomNum, getAnswer } from '..';
 
 const parityCheck = (userName) => {
   for (let i = 0; i < 3; i += 1) {
     const num = getRandomNum(50);
 
     console.log(`Question: ${num}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = getAnswer();
 
     if ((num % 2 === 0 && answer === 'yes') || (num % 2 > 0 && answer === 'no')) {
       console.log('Correct!');
     } else {
+      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.")
       console.log(`Let's try again, ${userName}!`);
       return;
     }
@@ -22,7 +20,6 @@ const parityCheck = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-welcome();
-console.log('Answer "yes" if number even otherwise answer "no".');
+welcome(games["brain-even"]);
 const name = familiarity();
 parityCheck(name);
