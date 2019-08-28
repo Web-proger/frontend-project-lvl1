@@ -6,3 +6,6 @@ how to play: https://asciinema.org/a/Ft5OSuRD5Mw3V3zhTMKGEmW8S
 
 brain-calc
 how install & play: https://asciinema.org/a/A9q9njb8whINMgHbcgc520YOT
+
+brain-gcd
+how install & play: https://asciinema.org/a/iJ5CGtsHJQ1VHNgYXdZJTgTnbgit 
