@@ -8,7 +8,7 @@ import {
   getAnswer,
   calc,
   compareAndNotify,
-} from '..';
+} from '../../index';
 
 const startGame = (userName) => {
   for (let i = 0; i < 3; i += 1) {

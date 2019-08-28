@@ -5,5 +5,4 @@ how install: https://asciinema.org/a/bDEU51bl6l5L0JKOE4UiQmQ1E
 how to play: https://asciinema.org/a/Ft5OSuRD5Mw3V3zhTMKGEmW8S
 
 brain-calc
-how install: 
-how to play: 
+how install & play: https://asciinema.org/a/A9q9njb8whINMgHbcgc520YOT

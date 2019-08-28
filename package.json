@@ -1,6 +1,6 @@
 {
   "name": "hex-brain-games",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Проект hexlet, lvl1. Brain games.",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,9 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-games": "dist/bin/games/brain-games.js",
+    "brain-even": "dist/bin/games/brain-even.js",
+    "brain-calc": "dist/bin/games/brain-calc.js"
   },
   "files": [
     "dist"
