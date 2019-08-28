@@ -1,31 +1,27 @@
 #!/usr/bin/env node
 
 import {
-  games,
+  gamesDescription,
   familiarity,
   welcome,
   getRandomNum,
   getAnswer,
+  compareAndNotify,
 } from '..';
 
-const parityCheck = (userName) => {
+const startGame = (userName) => {
   for (let i = 0; i < 3; i += 1) {
     const num = getRandomNum(50);
-
     console.log(`Question: ${num}`);
     const answer = getAnswer();
+    const expectedAnswer = num % 2 === 0 ? 'yes' : 'no';
 
-    if ((num % 2 === 0 && answer === 'yes') || (num % 2 > 0 && answer === 'no')) {
-      console.log('Correct!');
-    } else {
-      console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
+    const goOn = compareAndNotify(answer, expectedAnswer, userName);
+    if (!goOn) return;
   }
   console.log(`Congratulations, ${userName}!`);
 };
 
-welcome(games['brain-even']);
+welcome(gamesDescription['brain-even']);
 const name = familiarity();
-parityCheck(name);
+startGame(name);

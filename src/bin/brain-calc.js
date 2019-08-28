@@ -1,34 +1,32 @@
 #!/usr/bin/env node
 
 import {
-  games,
+  gamesDescription,
   familiarity,
   welcome,
   getRandomNum,
   getAnswer,
+  calc,
+  compareAndNotify,
 } from '..';
 
-const parityCheck = (userName) => {
+const startGame = (userName) => {
   for (let i = 0; i < 3; i += 1) {
     const num1 = getRandomNum(10);
     const num2 = getRandomNum(10);
     const operator = ['+', '-', '*'][getRandomNum(2)];
     const expression = `${num1} ${operator} ${num2}`;
+    const expectedAnswer = calc[operator](num1, num2);
 
     console.log(`Question: ${expression}`);
     const answer = getAnswer();
 
-    if (answer == eval(expression)) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${eval(expression)}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
+    const goOn = compareAndNotify(answer, expectedAnswer.toString(), userName);
+    if (!goOn) return;
   }
   console.log(`Congratulations, ${userName}!`);
 };
 
-welcome(games['brain-calc']);
+welcome(gamesDescription['brain-calc']);
 const name = familiarity();
-parityCheck(name);
+startGame(name);
