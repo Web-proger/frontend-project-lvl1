@@ -5,6 +5,7 @@ export const gamesDescription = {
   'brain-calc': 'What is the result of the expression?\n',
   'brain-gcd': 'Find the greatest common divisor of given numbers.\n',
   'brain-progression': 'What number is missing in the progression?\n',
+  'brain-prime': 'Answer "yes" if given number is prime. Otherwise answer "no".\n',
 };
 
 export const calc = {
@@ -36,6 +37,13 @@ export const getGcd = (a, b) => {
     }
   }
   return '0';
+};
+
+export const isPrimeNumber = (a) => {
+  for (let i = 2; i < a; i += 1) {
+    if (a % i === 0) return false;
+  }
+  return true;
 };
 
 export const getProgression = () => {

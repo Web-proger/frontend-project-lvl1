@@ -12,3 +12,6 @@ how install & play: https://asciinema.org/a/iJ5CGtsHJQ1VHNgYXdZJTgTnbgit
 
 brain-progression
 https://asciinema.org/a/7CZkBu0aD8pjI4KqGeTfsFqS8
+
+brain-prime
+https://asciinema.org/a/HVvDEoNkZCM08XRyJmYlVSDtq
