@@ -2,6 +2,11 @@
   "name": "hex-brain-games",
   "version": "1.7.0",
   "description": "Проект hexlet, lvl1. Brain games.",
+  "keywords": [
+    "hexlet",
+    "mini games",
+    "training project"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

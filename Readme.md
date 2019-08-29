@@ -1,17 +1,16 @@
 [![Build Status](https://travis-ci.com/Web-proger/frontend-project-lvl1.svg?branch=master)](https://travis-ci.com/Web-proger/frontend-project-lvl1)
 
-brain-even
-how install: https://asciinema.org/a/bDEU51bl6l5L0JKOE4UiQmQ1E
-how to play: https://asciinema.org/a/Ft5OSuRD5Mw3V3zhTMKGEmW8S
+###how to install:
+[demo](https://asciinema.org/a/O6CqvAenAzAZsyQYviaSytN03)
 
-brain-calc
-how install & play: https://asciinema.org/a/A9q9njb8whINMgHbcgc520YOT
+###how to play:
 
-brain-gcd
-how install & play: https://asciinema.org/a/iJ5CGtsHJQ1VHNgYXdZJTgTnbgit 
+[brain-even](https://asciinema.org/a/JZhhNIwfcnuJedg0QaHd3GI7P)
 
-brain-progression
-https://asciinema.org/a/7CZkBu0aD8pjI4KqGeTfsFqS8
+[brain-calc](https://asciinema.org/a/0mswkJSg3XI9XwLlKlf5mkr6y)
 
-brain-prime
-https://asciinema.org/a/HVvDEoNkZCM08XRyJmYlVSDtq
+[brain-gcd](https://asciinema.org/a/G07CMrUgTcVJiju5rk9jrtVPz)
+
+[brain-progression](https://asciinema.org/a/Cukw1JNhVhnpbVygQT8GCWhCh)
+
+[brain-prime](https://asciinema.org/a/6ysmefM9yAud2VGkFZoCXMNvj)
