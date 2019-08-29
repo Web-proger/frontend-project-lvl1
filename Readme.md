@@ -9,3 +9,6 @@ how install & play: https://asciinema.org/a/A9q9njb8whINMgHbcgc520YOT
 
 brain-gcd
 how install & play: https://asciinema.org/a/iJ5CGtsHJQ1VHNgYXdZJTgTnbgit 
+
+brain-progression
+https://asciinema.org/a/dI3lG1sT8n6KZg15OseRkvn5E

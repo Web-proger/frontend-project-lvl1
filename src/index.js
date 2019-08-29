@@ -4,6 +4,7 @@ export const gamesDescription = {
   'brain-even': 'Answer "yes" if number even otherwise answer "no".\n',
   'brain-calc': 'What is the result of the expression?\n',
   'brain-gcd': 'Find the greatest common divisor of given numbers.\n',
+  'brain-progression': 'What number is missing in the progression?',
 };
 
 export const calc = {
@@ -35,6 +36,17 @@ export const getGcd = (a, b) => {
     }
   }
   return '0';
+};
+
+export const getProgression = () => {
+  const start = getRandomNum(5);
+  const array = [start];
+  const operator = ['+', '-', '*'][getRandomNum(2)];
+  for (let i = 1; i < 10; i += 1) {
+    const prevNum = array[i - 1];
+    array[i] = calc[operator](prevNum, start);
+  }
+  return array;
 };
 
 export const welcome = (gameDescription) => {
