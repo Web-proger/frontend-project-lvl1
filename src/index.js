@@ -4,7 +4,7 @@ export const gamesDescription = {
   'brain-even': 'Answer "yes" if number even otherwise answer "no".\n',
   'brain-calc': 'What is the result of the expression?\n',
   'brain-gcd': 'Find the greatest common divisor of given numbers.\n',
-  'brain-progression': 'What number is missing in the progression?',
+  'brain-progression': 'What number is missing in the progression?\n',
 };
 
 export const calc = {

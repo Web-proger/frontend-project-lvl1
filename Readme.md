@@ -11,4 +11,4 @@ brain-gcd
 how install & play: https://asciinema.org/a/iJ5CGtsHJQ1VHNgYXdZJTgTnbgit 
 
 brain-progression
-https://asciinema.org/a/dI3lG1sT8n6KZg15OseRkvn5E
+https://asciinema.org/a/7CZkBu0aD8pjI4KqGeTfsFqS8

@@ -25,6 +25,6 @@ const startGame = (userName) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-welcome(gamesDescription['brain-even']);
+welcome(gamesDescription['brain-progression']);
 const name = familiarity();
 startGame(name);
