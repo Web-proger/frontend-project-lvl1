@@ -1,13 +1,12 @@
 {
   "name": "hex-brain-games",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Проект hexlet, lvl1. Brain games.",
   "keywords": [
     "hexlet",
     "mini games",
     "training project"
   ],
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
@@ -45,7 +44,6 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-flowtype": "^4.2.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^22.15.1",
     "eslint-plugin-lodash-fp": "^2.2.0-a1"
   },
   "dependencies": {
