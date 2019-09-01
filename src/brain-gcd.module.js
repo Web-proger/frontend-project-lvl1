@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import {
   gamesDescription,
   getUserName,
@@ -7,8 +5,18 @@ import {
   getRandomNum,
   getAnswer,
   compareAndNotify,
-  getGcd,
 } from './index';
+
+const getGcd = (a, b) => {
+  const smallNum = a < b ? a : b;
+  const bigNum = a >= b ? a : b;
+  for (let i = smallNum; i > 0; i -= 1) {
+    if (smallNum % i === 0) {
+      if (bigNum % i === 0) return i;
+    }
+  }
+  return '0';
+};
 
 const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {

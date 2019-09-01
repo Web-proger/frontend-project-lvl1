@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import {
   gamesDescription,
   getUserName,
@@ -7,8 +5,14 @@ import {
   getRandomNum,
   getAnswer,
   compareAndNotify,
-  isPrimeNumber,
 } from './index';
+
+const isPrimeNumber = (a) => {
+  for (let i = 2; i < a; i += 1) {
+    if (a % i === 0) return false;
+  }
+  return true;
+};
 
 const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {

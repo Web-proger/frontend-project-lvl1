@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import {
   gamesDescription,
   getUserName,
@@ -7,8 +5,20 @@ import {
   getRandomNum,
   getAnswer,
   compareAndNotify,
-  getProgression,
+  calc,
 } from './index';
+
+const getProgression = () => {
+  const start = getRandomNum(5);
+  const array = [start];
+  const operators = ['+', '-', '*'];
+  const operator = operators[getRandomNum(operators.length - 1)];
+  for (let i = 1; i < 10; i += 1) {
+    const prevNum = array[i - 1];
+    array[i] = calc[operator](prevNum, start);
+  }
+  return array;
+};
 
 const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {
