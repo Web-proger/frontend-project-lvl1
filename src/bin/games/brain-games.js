@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { familiarity, welcome } from '../../index';
+import { getUserName, userGreeting } from '../../brain-games.module';
 
-welcome();
-familiarity();
+userGreeting();
+getUserName();

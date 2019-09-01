@@ -57,7 +57,7 @@ export const getProgression = () => {
   return array;
 };
 
-export const welcome = (gameDescription) => {
+export const userGreeting = (gameDescription) => {
   console.log('Welcome to the Brain Games!');
   if (gameDescription) {
     console.log(gameDescription);
@@ -66,7 +66,7 @@ export const welcome = (gameDescription) => {
   }
 };
 
-export const familiarity = () => {
+export const getUserName = () => {
   let userName = readlineSync.question('May I have your name? ');
   if (!userName) userName = 'anonymous';
   console.log(`Hello, ${userName}!\n`);
