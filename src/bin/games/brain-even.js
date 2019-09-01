@@ -9,8 +9,8 @@ import {
   compareAndNotify,
 } from '../../index';
 
-const startGame = (userName) => {
-  for (let i = 0; i < 3; i += 1) {
+const startGame = (userName, roundsNumber = 3) => {
+  for (let i = 0; i < roundsNumber; i += 1) {
     const num = getRandomNum(50);
     console.log(`Question: ${num}`);
     const answer = getAnswer();

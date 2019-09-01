@@ -10,8 +10,8 @@ import {
   getProgression,
 } from '../../index';
 
-const startGame = (userName) => {
-  for (let i = 0; i < 3; i += 1) {
+const startGame = (userName, roundsNumber = 3) => {
+  for (let i = 0; i < roundsNumber; i += 1) {
     const progression = getProgression();
     const numOfElement = getRandomNum(9);
     const expectedAnswer = progression[numOfElement];

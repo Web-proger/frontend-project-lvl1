@@ -10,11 +10,12 @@ import {
   compareAndNotify,
 } from '../../index';
 
-const startGame = (userName) => {
-  for (let i = 0; i < 3; i += 1) {
+const startGame = (userName, roundsNumber = 3) => {
+  for (let i = 0; i < roundsNumber; i += 1) {
     const num1 = getRandomNum(10);
     const num2 = getRandomNum(10);
-    const operator = ['+', '-', '*'][getRandomNum(2)];
+    const operators = ['+', '-', '*'];
+    const operator = operators[getRandomNum(operators.length - 1)];
     const expression = `${num1} ${operator} ${num2}`;
     const expectedAnswer = calc[operator](num1, num2);
 
