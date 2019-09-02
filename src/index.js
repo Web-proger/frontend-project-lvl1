@@ -24,8 +24,6 @@ export const getUserName = () => {
   return userName;
 };
 
-export const getAnswer = () => readlineSync.question('Your answer: ');
-
 export const calc = {
   '+': (a, b) => a + b,
   '-': (a, b) => a - b,
@@ -42,4 +40,4 @@ export const compareAndNotify = (answer, expectedAnswer, userName) => {
   return false;
 };
 
-export const getRandomNum = (maxNumber = 100) => Math.round(Math.random() * maxNumber);
+export const getRandomNum = (min, max) => Math.round(min - 0.5 + Math.random() * (max - min + 1));

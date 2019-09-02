@@ -1,4 +1,6 @@
 import { getUserName, userGreeting } from './index';
 
-userGreeting();
-getUserName();
+export default () => {
+  userGreeting();
+  getUserName();
+};

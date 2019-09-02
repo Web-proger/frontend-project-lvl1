@@ -1,9 +1,9 @@
+import readlineSync from 'readline-sync';
 import {
   gamesDescription,
   getUserName,
   userGreeting,
   getRandomNum,
-  getAnswer,
   compareAndNotify,
 } from './index';
 
@@ -20,10 +20,10 @@ const getGcd = (a, b) => {
 
 const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {
-    const num1 = getRandomNum(50);
-    const num2 = getRandomNum(50);
+    const num1 = getRandomNum(0, 50);
+    const num2 = getRandomNum(0, 50);
     console.log(`Question: ${num1} ${num2}`);
-    const answer = getAnswer();
+    const answer = readlineSync.question('Your answer: ');
     const expectedAnswer = getGcd(num1, num2);
 
     const goOn = compareAndNotify(answer, expectedAnswer.toString(), userName);
@@ -32,6 +32,8 @@ const startGame = (userName, roundsNumber = 3) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-userGreeting(gamesDescription['brain-gcd']);
-const name = getUserName();
-startGame(name);
+export default () => {
+  userGreeting(gamesDescription['brain-gcd']);
+  const name = getUserName();
+  startGame(name);
+};
