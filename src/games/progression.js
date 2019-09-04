@@ -1,19 +1,20 @@
 import readlineSync from 'readline-sync';
 import {
-  gamesDescription,
   getUserName,
   userGreeting,
   getRandomNum,
   compareAndNotify,
   calc,
-} from './index';
+} from '../index';
 
-const getProgression = () => {
+const gamesDescription = 'What number is missing in the progression?\n';
+
+const getProgression = (length) => {
   const start = getRandomNum(0, 5);
   const array = [start];
   const operators = ['+', '-', '*'];
   const operator = operators[getRandomNum(0, operators.length - 1)];
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < length; i += 1) {
     const prevNum = array[i - 1];
     array[i] = calc[operator](prevNum, start);
   }
@@ -21,9 +22,10 @@ const getProgression = () => {
 };
 
 const startGame = (userName, roundsNumber = 3) => {
+  const progressionLength = 10;
   for (let i = 0; i < roundsNumber; i += 1) {
-    const progression = getProgression();
-    const numOfElement = getRandomNum(0, 9);
+    const progression = getProgression(progressionLength);
+    const numOfElement = getRandomNum(0, progressionLength - 1);
     const expectedAnswer = progression[numOfElement];
     progression[numOfElement] = '..';
     console.log(`Question: ${progression.join(' ')}`);
@@ -36,7 +38,7 @@ const startGame = (userName, roundsNumber = 3) => {
 };
 
 export default () => {
-  userGreeting(gamesDescription['brain-progression']);
+  userGreeting(gamesDescription);
   const name = getUserName();
   startGame(name);
 };

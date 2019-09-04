@@ -1,6 +1,6 @@
 {
   "name": "hex-brain-games",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Проект hexlet, lvl1. Brain games.",
   "keywords": [
     "hexlet",
@@ -13,12 +13,12 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-    "brain-games": "dist/bin/games/brain-games.js",
-    "brain-even": "dist/bin/games/brain-even.js",
-    "brain-calc": "dist/bin/games/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd.js",
-    "brain-progression": "dist/bin/games/brain-progression.js",
-    "brain-prime": "dist/bin/games/brain-prime.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js",
+    "brain-progression": "dist/bin/brain-progression.js",
+    "brain-prime": "dist/bin/brain-prime.js"
   },
   "files": [
     "dist"
@@ -41,10 +41,8 @@
     "babel-eslint": "^10.0.2",
     "eslint": "^6.2.1",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-flowtype": "^4.2.0",
     "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-lodash-fp": "^2.2.0-a1"
+    "eslint-plugin-babel": "^5.3.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

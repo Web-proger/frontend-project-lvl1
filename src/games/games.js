@@ -1,4 +1,4 @@
-import { getUserName, userGreeting } from './index';
+import { getUserName, userGreeting } from '../index';
 
 export default () => {
   userGreeting();

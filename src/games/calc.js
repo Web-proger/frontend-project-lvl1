@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
 import {
-  gamesDescription,
   getUserName,
   userGreeting,
   getRandomNum,
   calc,
   compareAndNotify,
-} from './index';
+} from '../index';
+
+const gamesDescription = 'What is the result of the expression?\n';
 
 const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {
@@ -27,7 +28,7 @@ const startGame = (userName, roundsNumber = 3) => {
 };
 
 export default () => {
-  userGreeting(gamesDescription['brain-calc']);
+  userGreeting(gamesDescription);
   const name = getUserName();
   startGame(name);
 };

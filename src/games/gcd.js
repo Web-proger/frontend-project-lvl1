@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 import {
-  gamesDescription,
   getUserName,
   userGreeting,
   getRandomNum,
   compareAndNotify,
-} from './index';
+} from '../index';
+
+const gamesDescription = 'Find the greatest common divisor of given numbers.\n';
 
 const getGcd = (a, b) => {
   const smallNum = a < b ? a : b;
@@ -33,7 +34,7 @@ const startGame = (userName, roundsNumber = 3) => {
 };
 
 export default () => {
-  userGreeting(gamesDescription['brain-gcd']);
+  userGreeting(gamesDescription);
   const name = getUserName();
   startGame(name);
 };
