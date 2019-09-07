@@ -1,10 +1,4 @@
-import readlineSync from 'readline-sync';
-import {
-  getUserName,
-  userGreeting,
-  getRandomNum,
-  compareAnswers,
-} from '../index';
+import getRandomNum from '../utils';
 
 const gamesDescription = 'What number is missing in the progression?\n';
 
@@ -26,30 +20,16 @@ const getProgression = (length) => {
   return array;
 };
 
-const startGame = (userName, roundsNumber = 3) => {
+const getData = () => {
   const progressionLength = 10;
-  for (let i = 0; i < roundsNumber; i += 1) {
-    const progression = getProgression(progressionLength);
-    const numOfElement = getRandomNum(0, progressionLength - 1);
-    const correctAnswer = progression[numOfElement];
-    progression[numOfElement] = '..';
-    console.log(`Question: ${progression.join(' ')}`);
-    const answer = readlineSync.question('Your answer: ');
+  const progression = getProgression(progressionLength);
+  const numOfElement = getRandomNum(0, progressionLength - 1);
+  const correctAnswer = progression.splice(numOfElement, 1, '..')[0];
 
-    const isValidAnswer = compareAnswers(answer, correctAnswer);
-    if (isValidAnswer) {
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${userName}!`);
-      return;
-    }
-  }
-  console.log(`Congratulations, ${userName}!`);
+  return {
+    correctAnswer: correctAnswer, // eslint-disable-line object-shorthand
+    question: progression.join(' '),
+  };
 };
 
-export default () => {
-  userGreeting(gamesDescription);
-  const name = getUserName();
-  startGame(name);
-};
+export { getData, gamesDescription };

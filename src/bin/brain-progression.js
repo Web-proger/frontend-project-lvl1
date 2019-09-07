@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import startGame from '../games/progression';
+import startGame from '../index';
+import { getData, gamesDescription } from '../games/progression';
 
-startGame();
+startGame(getData, gamesDescription);
