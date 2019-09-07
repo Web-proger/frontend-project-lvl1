@@ -3,7 +3,7 @@ import {
   getUserName,
   userGreeting,
   getRandomNum,
-  compareAndNotify,
+  compareAnswers,
   calc,
 } from '../index';
 
@@ -26,13 +26,19 @@ const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {
     const progression = getProgression(progressionLength);
     const numOfElement = getRandomNum(0, progressionLength - 1);
-    const expectedAnswer = progression[numOfElement];
+    const correctAnswer = progression[numOfElement];
     progression[numOfElement] = '..';
     console.log(`Question: ${progression.join(' ')}`);
     const answer = readlineSync.question('Your answer: ');
 
-    const goOn = compareAndNotify(answer, expectedAnswer.toString(), userName);
-    if (!goOn) return;
+    const isValidAnswer = compareAnswers(answer, correctAnswer);
+    if (isValidAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
   }
   console.log(`Congratulations, ${userName}!`);
 };

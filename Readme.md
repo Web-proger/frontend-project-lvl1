@@ -2,7 +2,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/16463d4dcce59f603244/maintainability)](https://codeclimate.com/github/Web-proger/frontend-project-lvl1/maintainability)
 
 ###how to install:
-[demo](https://asciinema.org/a/O6CqvAenAzAZsyQYviaSytN03)
+[demo](https://asciinema.org/a/2EQY0ygRjydKcepQVBgSmKXd4)
 
 ###how to play:
 

@@ -3,7 +3,7 @@ import {
   getUserName,
   userGreeting,
   getRandomNum,
-  compareAndNotify,
+  compareAnswers,
 } from '../index';
 
 const gamesDescription = 'Answer "yes" if number even otherwise answer "no".\n';
@@ -13,10 +13,16 @@ const startGame = (userName, roundsNumber = 3) => {
     const num = getRandomNum(1, 100);
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ');
-    const expectedAnswer = num % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
 
-    const goOn = compareAndNotify(answer, expectedAnswer, userName);
-    if (!goOn) return;
+    const isValidAnswer = compareAnswers(answer, correctAnswer);
+    if (isValidAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
   }
   console.log(`Congratulations, ${userName}!`);
 };
