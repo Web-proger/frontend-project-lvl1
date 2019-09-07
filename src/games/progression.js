@@ -4,10 +4,15 @@ import {
   userGreeting,
   getRandomNum,
   compareAnswers,
-  calc,
 } from '../index';
 
 const gamesDescription = 'What number is missing in the progression?\n';
+
+const calc = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
 
 const getProgression = (length) => {
   const start = getRandomNum(0, 5);

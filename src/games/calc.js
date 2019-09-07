@@ -3,11 +3,16 @@ import {
   getUserName,
   userGreeting,
   getRandomNum,
-  calc,
   compareAnswers,
 } from '../index';
 
 const gamesDescription = 'What is the result of the expression?\n';
+
+const calc = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
 
 const startGame = (userName, roundsNumber = 3) => {
   for (let i = 0; i < roundsNumber; i += 1) {
