@@ -1,5 +1,5 @@
 import getRandomNum from '../utils';
-import startGame from '../index';
+import playGame from '../index';
 
 const gamesDescription = 'What is the result of the expression?';
 
@@ -21,4 +21,4 @@ const getData = () => {
   };
 };
 
-export default () => startGame(getData, gamesDescription);
+export default () => playGame(getData, gamesDescription);

@@ -1,5 +1,5 @@
 import getRandomNum from '../utils';
-import startGame from '../index';
+import playGame from '../index';
 
 const gamesDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
@@ -7,19 +7,15 @@ const progressionLength = 10;
 const getProgressionData = () => {
   const startProgressionNumber = getRandomNum(1, 100);
   const stepProgression = getRandomNum(1, 50);
-  const hiddenItemNumber = getRandomNum(0, 9);
+  const hiddenItemNumber = getRandomNum(1, 10);
   const numbers = [];
-  for (let i = 0; i < progressionLength; i += 1) {
-    if (i === 0) {
-      numbers[i] = startProgressionNumber;
-    } else {
-      numbers[i] = startProgressionNumber + stepProgression * i;
-    }
+  for (let i = 1; i <= progressionLength; i += 1) {
+    numbers[i - 1] = startProgressionNumber + stepProgression * (i - 1);
   }
-  numbers[hiddenItemNumber] = '..';
+  numbers[hiddenItemNumber - 1] = '..';
 
   return {
-    correctAnswer: startProgressionNumber + stepProgression * hiddenItemNumber,
+    correctAnswer: startProgressionNumber + stepProgression * (hiddenItemNumber - 1),
     progression: numbers,
   };
 };
@@ -33,4 +29,4 @@ const getData = () => {
   };
 };
 
-export default () => startGame(getData, gamesDescription);
+export default () => playGame(getData, gamesDescription);
