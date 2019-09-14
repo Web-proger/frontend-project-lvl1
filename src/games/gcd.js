@@ -1,6 +1,7 @@
 import getRandomNum from '../utils';
+import startGame from '../index';
 
-const gamesDescription = 'Find the greatest common divisor of given numbers.\n';
+const gamesDescription = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (a, b) => {
   const min = a < b ? a : b;
@@ -23,4 +24,4 @@ const getData = () => {
   };
 };
 
-export { getData, gamesDescription };
+export default () => startGame(getData, gamesDescription);

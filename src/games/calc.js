@@ -1,6 +1,7 @@
 import getRandomNum from '../utils';
+import startGame from '../index';
 
-const gamesDescription = 'What is the result of the expression?\n';
+const gamesDescription = 'What is the result of the expression?';
 
 const operations = {
   '+': (a, b) => a + b,
@@ -20,4 +21,4 @@ const getData = () => {
   };
 };
 
-export { getData, gamesDescription };
+export default () => startGame(getData, gamesDescription);

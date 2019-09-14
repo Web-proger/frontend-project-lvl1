@@ -1,35 +1,36 @@
 import getRandomNum from '../utils';
+import startGame from '../index';
 
-const gamesDescription = 'What number is missing in the progression?\n';
-
+const gamesDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
-const calc = {
-  '+': (a, b) => a + b,
-  '-': (a, b) => a - b,
-  '*': (a, b) => a * b,
-};
 
-const getProgression = (length) => {
-  const startNumber = getRandomNum(0, 5);
-  const numbers = [startNumber];
-  const operators = ['+', '-', '*'];
-  const operator = operators[getRandomNum(0, operators.length - 1)];
-  for (let i = 1; i < length; i += 1) {
-    const prevNum = numbers[i - 1];
-    numbers[i] = calc[operator](prevNum, startNumber);
+const getProgressionData = () => {
+  const startProgressionNumber = getRandomNum(1, 100);
+  const stepProgression = getRandomNum(1, 50);
+  const hiddenItemNumber = getRandomNum(0, 9);
+  const numbers = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    if (i === 0) {
+      numbers[i] = startProgressionNumber;
+    } else {
+      numbers[i] = startProgressionNumber + stepProgression * i;
+    }
   }
-  return numbers;
+  numbers[hiddenItemNumber] = '..';
+
+  return {
+    correctAnswer: startProgressionNumber + stepProgression * hiddenItemNumber,
+    progression: numbers,
+  };
 };
 
 const getData = () => {
-  const progression = getProgression(progressionLength);
-  const numOfElement = getRandomNum(0, progressionLength - 1);
-  const correctAnswer = progression.splice(numOfElement, 1, '..')[0];
+  const { correctAnswer, progression } = getProgressionData();
 
   return {
-    correctAnswer: correctAnswer, // eslint-disable-line object-shorthand
+    correctAnswer,
     question: progression.join(' '),
   };
 };
 
-export { getData, gamesDescription };
+export default () => startGame(getData, gamesDescription);

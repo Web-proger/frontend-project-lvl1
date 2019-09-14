@@ -1,6 +1,7 @@
 import getRandomNum from '../utils';
+import startGame from '../index';
 
-const gamesDescription = 'Answer "yes" if number even otherwise answer "no".\n';
+const gamesDescription = 'Answer "yes" if number even otherwise answer "no".';
 
 const getData = () => {
   const numberForQuestion = getRandomNum(1, 100);
@@ -12,4 +13,4 @@ const getData = () => {
   };
 };
 
-export { getData, gamesDescription };
+export default () => startGame(getData, gamesDescription);
