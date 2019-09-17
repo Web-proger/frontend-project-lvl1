@@ -15,12 +15,12 @@ const getGcd = (a, b) => {
 };
 
 const getData = () => {
-  const num1 = getRandomNum(0, 50);
-  const num2 = getRandomNum(0, 50);
+  const firstRandomNumber = getRandomNum(0, 50);
+  const secondRandomNumber = getRandomNum(0, 50);
 
   return {
-    question: `${num1} ${num2}`,
-    correctAnswer: getGcd(num1, num2),
+    question: `${firstRandomNumber} ${secondRandomNumber}`,
+    correctAnswer: getGcd(firstRandomNumber, secondRandomNumber),
   };
 };
 

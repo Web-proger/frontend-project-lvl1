@@ -8,16 +8,16 @@ const operations = {
   '-': (a, b) => a - b,
   '*': (a, b) => a * b,
 };
+const operators = Object.keys(operations);
 
 const getData = () => {
-  const num1 = getRandomNum(0, 10);
-  const num2 = getRandomNum(0, 10);
-  const operators = Object.keys(operations);
+  const firstRandomNumber = getRandomNum(0, 10);
+  const secondRandomNumber = getRandomNum(0, 10);
   const operator = operators[getRandomNum(0, operators.length - 1)];
 
   return {
-    question: `${num1} ${operator} ${num2}`,
-    correctAnswer: operations[operator](num1, num2),
+    question: `${firstRandomNumber} ${operator} ${secondRandomNumber}`,
+    correctAnswer: operations[operator](firstRandomNumber, secondRandomNumber),
   };
 };
 

@@ -2,14 +2,14 @@ import getRandomNum from '../utils';
 import playGame from '../index';
 
 const gamesDescription = 'Answer "yes" if number even otherwise answer "no".';
+const isEven = (number) => (number % 2 === 0);
 
 const getData = () => {
-  const numberForQuestion = getRandomNum(1, 100);
-  const isEven = (number) => (number % 2 === 0 ? 'yes' : 'no');
+  const randomNumber = getRandomNum(1, 100);
 
   return {
-    question: numberForQuestion,
-    correctAnswer: isEven(numberForQuestion),
+    question: randomNumber,
+    correctAnswer: isEven(randomNumber) ? 'yes' : 'no',
   };
 };
 
