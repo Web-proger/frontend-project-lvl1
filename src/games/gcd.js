@@ -24,7 +24,7 @@ const getData = () => {
 
   return {
     question: `${firstRandomNumber} ${secondRandomNumber}`,
-    correctAnswer: getGcd(firstRandomNumber, secondRandomNumber),
+    correctAnswer: getGcd(firstRandomNumber, secondRandomNumber).toString(),
   };
 };
 

@@ -17,7 +17,7 @@ const getData = () => {
 
   return {
     question: `${firstRandomNumber} ${operator} ${secondRandomNumber}`,
-    correctAnswer: operations[operator](firstRandomNumber, secondRandomNumber),
+    correctAnswer: operations[operator](firstRandomNumber, secondRandomNumber).toString(),
   };
 };
 

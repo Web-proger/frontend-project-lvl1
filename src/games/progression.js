@@ -21,8 +21,8 @@ const getData = () => {
   progression[hiddenItemIndex - 1] = '..';
 
   return {
-    correctAnswer: startProgressionNumber + stepProgression * (hiddenItemIndex - 1),
     question: progression.join(' '),
+    correctAnswer: (startProgressionNumber + stepProgression * (hiddenItemIndex - 1)).toString(),
   };
 };
 
