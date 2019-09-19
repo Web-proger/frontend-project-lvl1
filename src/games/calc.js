@@ -11,13 +11,13 @@ const operations = {
 const operators = Object.keys(operations);
 
 const getData = () => {
-  const firstRandomNumber = getRandomNum(0, 10);
-  const secondRandomNumber = getRandomNum(0, 10);
+  const a = getRandomNum(0, 10);
+  const b = getRandomNum(0, 10);
   const operator = operators[getRandomNum(0, operators.length - 1)];
 
   return {
-    question: `${firstRandomNumber} ${operator} ${secondRandomNumber}`,
-    correctAnswer: operations[operator](firstRandomNumber, secondRandomNumber).toString(),
+    question: `${a} ${operator} ${b}`,
+    correctAnswer: operations[operator](a, b).toString(),
   };
 };
 

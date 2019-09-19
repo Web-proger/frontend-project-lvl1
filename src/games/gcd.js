@@ -19,12 +19,12 @@ const getGcd = (a, b) => {
 };
 
 const getData = () => {
-  const firstRandomNumber = getRandomNum(1, 50);
-  const secondRandomNumber = getRandomNum(1, 50);
+  const a = getRandomNum(1, 50);
+  const b = getRandomNum(1, 50);
 
   return {
-    question: `${firstRandomNumber} ${secondRandomNumber}`,
-    correctAnswer: getGcd(firstRandomNumber, secondRandomNumber).toString(),
+    question: `${a} ${b}`,
+    correctAnswer: getGcd(a, b).toString(),
   };
 };
 
