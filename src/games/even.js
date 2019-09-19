@@ -5,11 +5,11 @@ const gamesDescription = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = (number) => number % 2 === 0;
 
 const getData = () => {
-  const a = getRandomNum(1, 100);
+  const num = getRandomNum(1, 100);
 
   return {
-    question: a,
-    correctAnswer: isEven(a) ? 'yes' : 'no',
+    question: num,
+    correctAnswer: isEven(num) ? 'yes' : 'no',
   };
 };
 

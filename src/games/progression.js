@@ -16,13 +16,13 @@ const getProgression = (start, step) => {
 const getData = () => {
   const start = getRandomNum(1, 100);
   const step = getRandomNum(1, 50);
-  const hiddenItemIndex = getRandomNum(1, length);
+  const hiddenItemIndex = getRandomNum(0, length - 1);
   const progression = getProgression(start, step);
-  progression[hiddenItemIndex - 1] = '..';
+  progression[hiddenItemIndex] = '..';
 
   return {
     question: progression.join(' '),
-    correctAnswer: (start + step * (hiddenItemIndex - 1)).toString(),
+    correctAnswer: (start + step * (hiddenItemIndex)).toString(),
   };
 };
 
