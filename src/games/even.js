@@ -1,15 +1,15 @@
 import getRandomNum from '../utils';
-import playGame from '../index';
+import playGame from '..';
 
 const gamesDescription = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = (number) => number % 2 === 0;
 
 const getData = () => {
-  const num = getRandomNum(1, 100);
+  const question = getRandomNum(1, 100);
 
   return {
-    question: num,
-    correctAnswer: isEven(num) ? 'yes' : 'no',
+    question,
+    correctAnswer: isEven(question) ? 'yes' : 'no',
   };
 };
 

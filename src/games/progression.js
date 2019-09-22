@@ -1,10 +1,9 @@
 import getRandomNum from '../utils';
-import playGame from '../index';
+import playGame from '..';
 
 const gamesDescription = 'What number is missing in the progression?';
-const length = 10;
 
-const getProgression = (start, step) => {
+const getProgression = (start, step, length) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
     progression[i] = start + step * i;
@@ -16,8 +15,9 @@ const getProgression = (start, step) => {
 const getData = () => {
   const start = getRandomNum(1, 100);
   const step = getRandomNum(1, 50);
-  const hiddenItemIndex = getRandomNum(0, length - 1);
-  const progression = getProgression(start, step);
+  const progression = getProgression(start, step, 10);
+  const hiddenItemIndex = getRandomNum(0, progression.length - 1);
+
   progression[hiddenItemIndex] = '..';
 
   return {
