@@ -12,11 +12,11 @@ const isPrime = (a) => {
 };
 
 const getData = () => {
-  const num = getRandomNum(1, 500);
+  const question = getRandomNum(1, 500);
 
   return {
-    question: num,
-    correctAnswer: isPrime(num) ? 'yes' : 'no',
+    question,
+    correctAnswer: isPrime(question) ? 'yes' : 'no',
   };
 };
 
